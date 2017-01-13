@@ -1,0 +1,33 @@
+<div>
+	<h1>Slot Machine</h1>
+	<div [ngClass]="{
+		'square': true,
+		'red': square1 === 0,
+		'orange': square1 === 1,
+		'yellow': square1 === 2,
+		'green': square1 === 3,
+		'blue': square1 === 4,
+		'purple': square1 === 5
+		}"></div>
+	<div [ngClass]="{
+		'square': true,
+		'red': square2 === 0,
+		'orange': square2 === 1,
+		'yellow': square2 === 2,
+		'green': square2 === 3,
+		'blue': square2 === 4,
+		'purple': square2 === 5
+		}"></div>
+	<div [ngClass]="{
+		'square': true,
+		'red': square3 === 0,
+		'orange': square3 === 1,
+		'yellow': square3 === 2,
+		'green': square3 === 3,
+		'blue': square3 === 4,
+		'purple': square3 === 5
+		}"></div>
+	<p>Money: {{money}}</p>
+	<p>Bet: <input [ngClass]="{'bet': true}" [(ngModel)]="bet"></p>
+	<button (click)="rollSlots()">Roll Slots</button>
+</div>
